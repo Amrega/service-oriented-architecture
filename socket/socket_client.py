@@ -9,8 +9,8 @@ def client_program():
     client_socket.connect((host, 5000))  # connect to the server
 
     messageN = input(" -> Username : ")  # take input
-    messageH = input(" -> Nomor HP : ")
-    messageE = input(" -> Email : ")
+    #messageH = input(" -> Nomor HP : ")
+    #messageE = input(" -> Email : ")
     
     while messageN.lower().strip() != 'bye':
         client_socket.send(messageN.encode())  # send message
@@ -24,26 +24,7 @@ def client_program():
 
 
 
-    while messageH.lower().strip() != 'bye':
-        client_socket.send(messageH.encode())  # send message
-        dataH = client_socket.recv(1024).decode()  # receive response
-
-        print('Received from server: ' + dataH)  # show in terminal
-
-        messageH = input(" -> ")  # again take input
-
-    client_socket.close()  # close the connection
-
-    
-    while messageE.lower().strip() != 'bye':
-        client_socket.send(messageE.encode())  # send message
-        dataE = client_socket.recv(1024).decode()  # receive response
-
-        print('Received from server: ' + dataE)  # show in terminal
-
-        messageE = input(" -> ")  # again take input
-
-    client_socket.close()  # close the connection
+   
 
 
 
