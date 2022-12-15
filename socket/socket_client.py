@@ -9,8 +9,6 @@ def client_program():
     client_socket.connect((host, 5000))  # connect to the server
 
     messageN = input(" -> Username : ")  # take input
-    #messageH = input(" -> Nomor HP : ")
-    #messageE = input(" -> Email : ")
     
     while messageN.lower().strip() != 'bye':
         client_socket.send(messageN.encode())  # send message

@@ -8,4 +8,4 @@ multicall.multiply(7, 3)
 multicall.divide(7, 3)
 result = multicall()
 
-print("7+3=%d, 7-3=%d, 7*3=%d, 7//3=%d" % tuple(result))ac
+print("7+3=%d, 7-3=%d, 7*3=%d, 7//3=%d" % tuple(result))
